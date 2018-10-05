@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 MAINTAINER masbenx <me@masbenx.net>
 
 ENV REFRESHED_AT 2017-05-20

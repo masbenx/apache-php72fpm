@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER masbenx <me@masbenx.net>
 
 ENV REFRESHED_AT 2017-05-20
@@ -38,14 +38,9 @@ RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 
 # Install PHP 7.2 with FPM and other various commonly used modules, including MySQL client
-RUN apt-get install -y \
+RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
 		php7.2 \
-                php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-common php7.2-curl \
-                php7.2-dev php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap php7.2-intl \
-                php7.2-json php7.2-ldap php7.2-mbstring php7.2-mcrypt php7.2-mysql \
-                php7.2-odbc php7.2-opcache php7.2-pgsql php7.2-phpdbg php7.2-pspell \
-                php7.2-readline php7.2-recode php7.2-soap php7.2-sqlite3 \
-                php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-xsl php7.2-zip
+                
 
 # Install Apache2 with FastCGI module and MySQL client for convenience
 RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \

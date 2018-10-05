@@ -34,7 +34,7 @@ ENV LC_ALL C.UTF-8
 RUN /usr/sbin/update-locale
 
 # Add repository for latest built PHP packages, e.g. 7.2 which isn't otherwise available in Xenial repositories
-# RUN add-apt-repository ppa:ondrej/php
+RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 
 # Install PHP 7.2 with FPM and other various commonly used modules, including MySQL client

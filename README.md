@@ -1,4 +1,4 @@
-# Docker Image: beveradb/docker-apache-php7-fpm
+# Docker Image: 
 
 Simple Dockerfile to setup Ubuntu 18.04 with Apache2.4 and PHP 7, optimised using PHP-FPM
 

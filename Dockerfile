@@ -38,7 +38,8 @@ RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 
 # Install PHP 7.2 with FPM and other various commonly used modules, including MySQL client
-RUN apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
+RUN apt-get install -y \
+		php7.2 \
                 php7.2-bcmath php7.2-bz2 php7.2-cli php7.2-common php7.2-curl \
                 php7.2-dev php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap php7.2-intl \
                 php7.2-json php7.2-ldap php7.2-mbstring php7.2-mcrypt php7.2-mysql \
